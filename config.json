@@ -1,7 +1,7 @@
 {
   "workflowApiVersion": "1.1",
   "metaData": {
-    "icon": "https://SEU-DOMINIO.com/img/icon.svg",
+    "icon": "https://definir-melhor-oferta.onrender.com/img/icon.svg",
     "category": "custom",
     "isConfigured": false
   },
@@ -31,25 +31,25 @@
   "configurationArguments": {
     "applicationExtensionKey": "definir-melhor-oferta-ext",
     "save": {
-      "url": "https://SEU-DOMINIO.com/save",
+      "url": "https://definir-melhor-oferta.onrender.com/save",
       "verb": "POST",
       "body": "",
       "header": ""
     },
     "publish": {
-      "url": "https://SEU-DOMINIO.com/publish",
+      "url": "https://definir-melhor-oferta.onrender.com/publish",
       "verb": "POST",
       "body": "",
       "header": ""
     },
     "validate": {
-      "url": "https://SEU-DOMINIO.com/validate",
+      "url": "https://definir-melhor-oferta.onrender.com/validate",
       "verb": "POST",
       "body": "",
       "header": ""
     },
     "stop": {
-      "url": "https://SEU-DOMINIO.com/stop",
+      "url": "https://definir-melhor-oferta.onrender.com/stop",
       "verb": "POST",
       "body": "",
       "header": ""
@@ -57,7 +57,7 @@
   },
   "arguments": {
     "execute": {
-      "url": "https://SEU-DOMINIO.com/execute",
+      "url": "https://definir-melhor-oferta.onrender.com/execute",
       "verb": "POST",
       "body": "",
       "header": "",
