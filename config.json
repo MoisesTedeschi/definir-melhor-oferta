@@ -1,0 +1,119 @@
+{
+  "workflowApiVersion": "1.1",
+  "metaData": {
+    "icon": "https://SEU-DOMINIO.com/img/icon.svg",
+    "category": "custom",
+    "isConfigured": false
+  },
+  "type": "REST",
+  "lang": {
+    "en-US": {
+      "name": "Definir Melhor Oferta",
+      "description": "Consulta a API de decisão e resolve a melhor oferta, mensagem e canal para o contato."
+    },
+    "pt-BR": {
+      "name": "Definir Melhor Oferta",
+      "description": "Consulta a API de decisão e resolve a melhor oferta, mensagem e canal para o contato."
+    }
+  },
+  "name": "Definir Melhor Oferta",
+  "key": "DEFINIR_MELHOR_OFERTA",
+  "description": "Custom Activity: chama o motor de decisão externo, resolve OfertaID/ProdutoID via Lookup e devolve mensagem + canal para os próximos steps da Journey.",
+  "publishedInteractionDefaultFlags": {
+    "hasEntrySource": false
+  },
+  "wizardSteps": [
+    {
+      "label": "Configurar consulta",
+      "key": "step1"
+    }
+  ],
+  "configurationArguments": {
+    "applicationExtensionKey": "definir-melhor-oferta-ext",
+    "save": {
+      "url": "https://SEU-DOMINIO.com/save",
+      "verb": "POST",
+      "body": "",
+      "header": ""
+    },
+    "publish": {
+      "url": "https://SEU-DOMINIO.com/publish",
+      "verb": "POST",
+      "body": "",
+      "header": ""
+    },
+    "validate": {
+      "url": "https://SEU-DOMINIO.com/validate",
+      "verb": "POST",
+      "body": "",
+      "header": ""
+    },
+    "stop": {
+      "url": "https://SEU-DOMINIO.com/stop",
+      "verb": "POST",
+      "body": "",
+      "header": ""
+    }
+  },
+  "arguments": {
+    "execute": {
+      "url": "https://SEU-DOMINIO.com/execute",
+      "verb": "POST",
+      "body": "",
+      "header": "",
+      "useJwt": true
+    },
+    "inArguments": [
+      {
+        "subscriberKey": "{{Contact.Key}}"
+      },
+      {
+        "emailAddress": "{{Contact.Attribute.\"DE_Entrada_Journey_Oferta\".\"EmailAddress\"}}"
+      },
+      {
+        "segmentoCliente": "{{Contact.Attribute.\"DE_Entrada_Journey_Oferta\".\"SegmentoCliente\"}}"
+      },
+      {
+        "canalPreferido": "{{Contact.Attribute.\"DE_Entrada_Journey_Oferta\".\"CanalPreferido\"}}"
+      },
+      {
+        "cpfOuCustomerId": "{{Contact.Attribute.\"DE_Entrada_Journey_Oferta\".\"CPF_ou_CustomerID\"}}"
+      }
+    ],
+    "outArguments": [
+      {
+        "ofertaEncontrada": ""
+      },
+      {
+        "ofertaId": ""
+      },
+      {
+        "produtoNome": ""
+      },
+      {
+        "canalEnvio": ""
+      },
+      {
+        "textoMensagem": ""
+      },
+      {
+        "ctaTexto": ""
+      },
+      {
+        "ctaUrl": ""
+      }
+    ],
+    "dataExtensions": []
+  },
+  "schema": {
+    "arguments": {
+      "execute": {
+        "inArguments": [],
+        "outArguments": []
+      }
+    },
+    "metaData": {
+      "isConfigured": false
+    }
+  }
+}

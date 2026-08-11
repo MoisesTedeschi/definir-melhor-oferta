@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: definir-melhor-oferta
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: MC_CLIENT_ID
+        sync: false
+      - key: MC_CLIENT_SECRET
+        sync: false
+      - key: MC_SUBDOMAIN
+        sync: false
+      - key: MC_ACCOUNT_ID
+        sync: false
+      - key: JB_JWT_SECRET
+        sync: false
+      - key: MOTOR_DECISAO_URL
+        sync: false
+      - key: MOTOR_DECISAO_API_KEY
+        sync: false
