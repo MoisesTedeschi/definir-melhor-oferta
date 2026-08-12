@@ -37,6 +37,13 @@ app.get('/config.json', (req, res) => {
 });
 
 // Tela de configuração da activity, renderizada dentro do iframe do Journey Builder
+// O Journey Builder busca {endpointUrl}/index.html a partir do Endpoint URL
+// configurado no Component — por isso a rota precisa existir com esse path
+// explícito, não só na raiz "/".
+app.get('/index.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
+});
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
