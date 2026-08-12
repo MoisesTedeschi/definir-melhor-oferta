@@ -12,11 +12,18 @@ var payload = {};
 
 // --- Ciclo de eventos exigido pelo Journey Builder ---
 
+// 'ready' precisa ser disparado assim que o iframe carrega — é essa
+// mensagem que avisa o Journey Builder que a tela está pronta. Ele então
+// responde disparando 'initActivity' com os dados salvos da activity.
+// Ficar esperando 'initActivity' para só então disparar 'ready' é um
+// impasse: nenhum dos dois lados dá o primeiro passo, e o iframe fica
+// carregando para sempre — foi exatamente esse o bug aqui.
+connection.trigger('ready');
+
 connection.on('initActivity', function (data) {
   if (data) {
     payload = data;
   }
-  connection.trigger('ready');
 
   // Já chega "configurada" porque não há campos que o usuário precise
   // preencher manualmente na tela — todo o dado vem do inArguments.
