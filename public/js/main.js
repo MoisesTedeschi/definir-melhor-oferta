@@ -39,11 +39,13 @@ connection.on('clickedNext', function () {
   payload['arguments'] = payload['arguments'] || {};
   payload['arguments'].execute = payload['arguments'].execute || {};
   payload['arguments'].execute.inArguments = [
-    { subscriberKey: '{{Contact.Key}}' },
-    { emailAddress: '{{Contact.Attribute."DE_Entrada_Journey_Oferta"."EmailAddress"}}' },
-    { segmentoCliente: '{{Contact.Attribute."DE_Entrada_Journey_Oferta"."SegmentoCliente"}}' },
-    { canalPreferido: '{{Contact.Attribute."DE_Entrada_Journey_Oferta"."CanalPreferido"}}' },
-    { cpfOuCustomerId: '{{Contact.Attribute."DE_Entrada_Journey_Oferta"."CPF_ou_CustomerID"}}' }
+    {
+      subscriberKey: '{{Contact.Key}}',
+      emailAddress: '{{Contact.Attribute."DE_Entrada_Journey_Oferta"."EmailAddress"}}',
+      segmentoCliente: '{{Contact.Attribute."DE_Entrada_Journey_Oferta"."SegmentoCliente"}}',
+      canalPreferido: '{{Contact.Attribute."DE_Entrada_Journey_Oferta"."CanalPreferido"}}',
+      cpfOuCustomerId: '{{Contact.Attribute."DE_Entrada_Journey_Oferta"."CPF_ou_CustomerID"}}'
+    }
   ];
 
   connection.trigger('updateActivity', payload);
