@@ -109,7 +109,64 @@
     "arguments": {
       "execute": {
         "inArguments": [],
-        "outArguments": []
+        "outArguments": [
+          {
+            "ofertaEncontrada": {
+              "dataType": "Boolean",
+              "isNullable": false,
+              "direction": "out",
+              "access": "visible"
+            }
+          },
+          {
+            "ofertaId": {
+              "dataType": "Text",
+              "isNullable": true,
+              "direction": "out",
+              "access": "visible"
+            }
+          },
+          {
+            "produtoNome": {
+              "dataType": "Text",
+              "isNullable": true,
+              "direction": "out",
+              "access": "visible"
+            }
+          },
+          {
+            "canalEnvio": {
+              "dataType": "Text",
+              "isNullable": true,
+              "direction": "out",
+              "access": "visible"
+            }
+          },
+          {
+            "textoMensagem": {
+              "dataType": "Text",
+              "isNullable": true,
+              "direction": "out",
+              "access": "visible"
+            }
+          },
+          {
+            "ctaTexto": {
+              "dataType": "Text",
+              "isNullable": true,
+              "direction": "out",
+              "access": "visible"
+            }
+          },
+          {
+            "ctaUrl": {
+              "dataType": "Text",
+              "isNullable": true,
+              "direction": "out",
+              "access": "visible"
+            }
+          }
+        ]
       }
     },
     "metaData": {
